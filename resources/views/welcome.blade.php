@@ -4,7 +4,7 @@
     <div class="pasta-container py-4">
         <div class="container">
             <h2>comics</h2>
-            <div class="row row-cols-4 g-3">
+            <div class="row row-cols-6 g-3">
                 @foreach ($comics as $comic)
                     <div class="col">
                         <div class="card">
