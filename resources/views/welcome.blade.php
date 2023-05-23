@@ -1,26 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@section('content')
+    <div class="pasta-container py-4">
+        <div class="container">
+            <h2>comics</h2>
+            <div class="row row-cols-4 g-3">
+                @foreach ($comics as $comic)
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ $comic['thumb'] }}" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $comic['series'] }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-
-    <main class="bg-light">
-        
-    </main>
-
-</body>
-
-</html>
+        </div>
+    </div>
+@endsection
